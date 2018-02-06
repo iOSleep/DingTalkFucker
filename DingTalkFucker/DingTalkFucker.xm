@@ -286,12 +286,14 @@
     
     NSMutableArray <DTSectionItem *> *sectionItems = [NSMutableArray array];
     
-    DTCellItem *openRedCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否开启红包插件" isSwitcherOn:self.punchConfig.isOpenPunchHelper switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
+    DTCellItem *openRedCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否开启红包插件" isSwitcherOn:self.punchConfig.enableRedEnvolop switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
         self.punchConfig.enableRedEnvolop = aSwitch.on;
     }];
-    DTCellItem *openPickMeCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否抢自己的红包" isSwitcherOn:self.punchConfig.isOpenPunchHelper switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
+  
+    DTCellItem *openPickMeCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否抢自己的红包" isSwitcherOn:self.punchConfig.pickOwnerRedEnvelop switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
         self.punchConfig.pickOwnerRedEnvelop = aSwitch.on;
     }];
+  
     DTSectionItem *boolSectionItem = [%c(DTSectionItem) itemWithSectionHeader:nil sectionFooter:nil];
     boolSectionItem.dataSource = @[openRedCellItem, openPickMeCellItem];
     [sectionItems addObject:boolSectionItem];
@@ -386,8 +388,11 @@
                 CGFloat delatyTIme = [LLPunchManager shared].punchConfig.delayTime;
                 NSLog(@"lingdaiping_delatyTIme = %f",delatyTIme);
                 if (delatyTIme > 0) {
-                    uint32_t cout = arc4random() % 100;
-                    CGFloat delayTime = cout / 100.0 * delatyTIme;
+                    int cout = arc4random() % 100;
+                  BOOL left = arc4random() % 2;
+                  CGFloat offset = cout / 100.0 * 0.5 * (left ? -1 : 1);
+                  CGFloat delayTime = MAX(0.5f, delatyTIme + offset);
+              
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         [imp pickRedEnvelopCluster:sid clusterId:cluseId successBlock:nil failureBlock:nil];
                     });

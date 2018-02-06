@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5C3AC02028960C008F7E09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C3AAA202893B6008F7E09 /* CoreLocation.framework */; };
+		5A5C3AC120289613008F7E09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C3AAC202893E4008F7E09 /* SystemConfiguration.framework */; };
+		5A5C3AC320289622008F7E09 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C3AC220289622008F7E09 /* Photos.framework */; };
+		5A5C3AC52028962D008F7E09 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C3AC42028962D008F7E09 /* AVFoundation.framework */; };
+		5A5C3ACB20289F01008F7E09 /* DingTalkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C3AC620289EFF008F7E09 /* DingTalkHelper.h */; };
+		5A5C3ACC20289F01008F7E09 /* LLPunchConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C3AC720289EFF008F7E09 /* LLPunchConfig.h */; };
+		5A5C3ACD20289F01008F7E09 /* LLPunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C3AC820289F00008F7E09 /* LLPunchConfig.m */; };
+		5A5C3ACE20289F01008F7E09 /* LLPunchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C3AC920289F00008F7E09 /* LLPunchManager.h */; };
+		5A5C3ACF20289F01008F7E09 /* LLPunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C3ACA20289F00008F7E09 /* LLPunchManager.m */; };
+		5A5C3AD92028B955008F7E09 /* DingTalkRedEnvelop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C3AD22028B954008F7E09 /* DingTalkRedEnvelop.h */; };
+		5A5C3ADA2028B955008F7E09 /* DingTalkRedEnvelop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C3AD32028B955008F7E09 /* DingTalkRedEnvelop.m */; };
+		5A5C3ADD2028B955008F7E09 /* DingTalkRedHead.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C3AD62028B955008F7E09 /* DingTalkRedHead.h */; };
 		5AE2147C20285B4900587831 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE2147B20285B4900587831 /* UIKit.framework */; };
 		5AE2147E20285B4900587831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE2147D20285B4900587831 /* Foundation.framework */; };
 		5AE2148020285B4900587831 /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE2147F20285B4900587831 /* CydiaSubstrate.framework */; };
@@ -14,13 +26,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A5C3AAA202893B6008F7E09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5A5C3AAC202893E4008F7E09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5A5C3AC220289622008F7E09 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		5A5C3AC42028962D008F7E09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5A5C3AC620289EFF008F7E09 /* DingTalkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DingTalkHelper.h; sourceTree = "<group>"; };
+		5A5C3AC720289EFF008F7E09 /* LLPunchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPunchConfig.h; sourceTree = "<group>"; };
+		5A5C3AC820289F00008F7E09 /* LLPunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPunchConfig.m; sourceTree = "<group>"; };
+		5A5C3AC920289F00008F7E09 /* LLPunchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPunchManager.h; sourceTree = "<group>"; };
+		5A5C3ACA20289F00008F7E09 /* LLPunchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPunchManager.m; sourceTree = "<group>"; };
+		5A5C3AD22028B954008F7E09 /* DingTalkRedEnvelop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DingTalkRedEnvelop.h; sourceTree = "<group>"; };
+		5A5C3AD32028B955008F7E09 /* DingTalkRedEnvelop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DingTalkRedEnvelop.m; sourceTree = "<group>"; };
+		5A5C3AD62028B955008F7E09 /* DingTalkRedHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DingTalkRedHead.h; sourceTree = "<group>"; };
 		5AE2147820285B4900587831 /* DingTalkFucker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = DingTalkFucker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE2147B20285B4900587831 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AE2147D20285B4900587831 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AE2147F20285B4900587831 /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
 		5AE2148420285B4900587831 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		5AE2148620285B4900587831 /* DingTalkFucker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DingTalkFucker-Prefix.pch"; sourceTree = "<group>"; };
-		5AE2148720285B4900587831 /* DingTalkFucker.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = DingTalkFucker.xm; sourceTree = "<group>"; };
+		5AE2148720285B4900587831 /* DingTalkFucker.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = DingTalkFucker.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5AE2148820285B4900587831 /* DingTalkFucker.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DingTalkFucker.mm; sourceTree = "<group>"; };
 		5AE2148D20285B4900587831 /* DingTalkFucker.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = DingTalkFucker.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/DingTalkFucker.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -30,6 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C3AC52028962D008F7E09 /* AVFoundation.framework in Frameworks */,
+				5A5C3AC320289622008F7E09 /* Photos.framework in Frameworks */,
+				5A5C3AC120289613008F7E09 /* SystemConfiguration.framework in Frameworks */,
+				5A5C3AC02028960C008F7E09 /* CoreLocation.framework in Frameworks */,
 				5AE2147C20285B4900587831 /* UIKit.framework in Frameworks */,
 				5AE2147E20285B4900587831 /* Foundation.framework in Frameworks */,
 				5AE2148020285B4900587831 /* CydiaSubstrate.framework in Frameworks */,
@@ -39,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A5C3ADE2028B95C008F7E09 /* red */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C3AD62028B955008F7E09 /* DingTalkRedHead.h */,
+				5A5C3AD22028B954008F7E09 /* DingTalkRedEnvelop.h */,
+				5A5C3AD32028B955008F7E09 /* DingTalkRedEnvelop.m */,
+			);
+			name = red;
+			sourceTree = "<group>";
+		};
 		5AE2146D20285B4900587831 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +97,10 @@
 		5AE2147A20285B4900587831 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C3AC42028962D008F7E09 /* AVFoundation.framework */,
+				5A5C3AC220289622008F7E09 /* Photos.framework */,
+				5A5C3AAC202893E4008F7E09 /* SystemConfiguration.framework */,
+				5A5C3AAA202893B6008F7E09 /* CoreLocation.framework */,
 				5AE2147B20285B4900587831 /* UIKit.framework */,
 				5AE2147D20285B4900587831 /* Foundation.framework */,
 				5AE2147F20285B4900587831 /* CydiaSubstrate.framework */,
@@ -69,7 +111,13 @@
 		5AE2148120285B4900587831 /* DingTalkFucker */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C3ADE2028B95C008F7E09 /* red */,
+				5A5C3AC620289EFF008F7E09 /* DingTalkHelper.h */,
 				5AE2148720285B4900587831 /* DingTalkFucker.xm */,
+				5A5C3AC720289EFF008F7E09 /* LLPunchConfig.h */,
+				5A5C3AC820289F00008F7E09 /* LLPunchConfig.m */,
+				5A5C3AC920289F00008F7E09 /* LLPunchManager.h */,
+				5A5C3ACA20289F00008F7E09 /* LLPunchManager.m */,
 				5AE2148820285B4900587831 /* DingTalkFucker.mm */,
 				5AE2148220285B4900587831 /* Package */,
 				5AE2148520285B4900587831 /* Supporting Files */,
@@ -133,6 +181,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C3ACE20289F01008F7E09 /* LLPunchManager.h in Headers */,
+				5A5C3ADD2028B955008F7E09 /* DingTalkRedHead.h in Headers */,
+				5A5C3ACB20289F01008F7E09 /* DingTalkHelper.h in Headers */,
+				5A5C3AD92028B955008F7E09 /* DingTalkRedEnvelop.h in Headers */,
+				5A5C3ACC20289F01008F7E09 /* LLPunchConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C3ACD20289F01008F7E09 /* LLPunchConfig.m in Sources */,
+				5A5C3ACF20289F01008F7E09 /* LLPunchManager.m in Sources */,
+				5A5C3ADA2028B955008F7E09 /* DingTalkRedEnvelop.m in Sources */,
 				5AE2148920285B4900587831 /* DingTalkFucker.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +348,7 @@
 		5AE2149120285B4900587831 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MBGN3F457N;
@@ -303,9 +360,9 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.0.14;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = "";
+				MonkeyDevDevicePort = 2222;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
@@ -317,6 +374,7 @@
 		5AE2149220285B4900587831 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MBGN3F457N;
@@ -328,9 +386,9 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.0.14;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = "";
+				MonkeyDevDevicePort = 2222;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;

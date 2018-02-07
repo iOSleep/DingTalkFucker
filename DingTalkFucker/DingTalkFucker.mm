@@ -1,9 +1,10 @@
-#line 1 "/Users/maxu/Desktop/DingTalkFucker/DingTalkFucker/DingTalkFucker.xm"
+#line 1 "/Users/yolande/code/jailbreak/DingTalkdFucker/DingTalkFucker/DingTalkFucker.xm"
 #import "DingTalkHelper.h"
 #import "LLPunchConfig.h"
 #import "LLPunchManager.h"
 #import "DingTalkRedEnvelop.h"
 #import "DingTalkRedHead.h"
+#import "IdentfierLog.h"
 
 
 #include <substrate.h>
@@ -26,10 +27,10 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class DTSettingListViewController; @class DTWebViewController; @class DTTableViewController; @class LLRedEnvelopSettingController; @class DTRedEnvelopServiceFactory; @class DTConversationListDataSource; @class LLSettingController; @class DTInfoPlist; @class DTCellItem; @class DTSectionItem; @class AMapLocationManager; @class LAPluginInstanceCollector; @class DTTableViewDataSource; 
+@class DTSectionItem; @class DTRedEnvelopServiceFactory; @class DTTableViewDataSource; @class LLSettingController; @class DTTableViewController; @class DTWebViewController; @class DTSettingListViewController; @class LAPluginInstanceCollector; @class LLRedEnvelopSettingController; @class DTCellItem; @class AMapLocationManager; @class DTInfoPlist; @class DTConversationListDataSource; 
 static BOOL (*_logos_orig$_ungrouped$DTWebViewController$pluginInstance$jsapiShouldCall$)(_LOGOS_SELF_TYPE_NORMAL DTWebViewController* _LOGOS_SELF_CONST, SEL, id, id); static BOOL _logos_method$_ungrouped$DTWebViewController$pluginInstance$jsapiShouldCall$(_LOGOS_SELF_TYPE_NORMAL DTWebViewController* _LOGOS_SELF_CONST, SEL, id, id); static void (*_logos_orig$_ungrouped$LAPluginInstanceCollector$handleJavaScriptRequest$callback$)(_LOGOS_SELF_TYPE_NORMAL LAPluginInstanceCollector* _LOGOS_SELF_CONST, SEL, id, void(^)(id dic)); static void _logos_method$_ungrouped$LAPluginInstanceCollector$handleJavaScriptRequest$callback$(_LOGOS_SELF_TYPE_NORMAL LAPluginInstanceCollector* _LOGOS_SELF_CONST, SEL, id, void(^)(id dic)); static void (*_logos_orig$_ungrouped$DTSettingListViewController$tidyDatasource)(_LOGOS_SELF_TYPE_NORMAL DTSettingListViewController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$DTSettingListViewController$tidyDatasource(_LOGOS_SELF_TYPE_NORMAL DTSettingListViewController* _LOGOS_SELF_CONST, SEL); static LLSettingController* (*_logos_orig$_ungrouped$LLSettingController$init)(_LOGOS_SELF_TYPE_INIT LLSettingController*, SEL) _LOGOS_RETURN_RETAINED; static LLSettingController* _logos_method$_ungrouped$LLSettingController$init(_LOGOS_SELF_TYPE_INIT LLSettingController*, SEL) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$_ungrouped$LLSettingController$viewDidLoad)(_LOGOS_SELF_TYPE_NORMAL LLSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLSettingController$viewDidLoad(_LOGOS_SELF_TYPE_NORMAL LLSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLSettingController$setNavigationBar(_LOGOS_SELF_TYPE_NORMAL LLSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLSettingController$tidyDataSource(_LOGOS_SELF_TYPE_NORMAL LLSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLSettingController$amapLocationManager$didUpdateLocation$reGeocode$(_LOGOS_SELF_TYPE_NORMAL LLSettingController* _LOGOS_SELF_CONST, SEL, AMapLocationManager *, id, id); static NSString * (*_logos_meta_orig$_ungrouped$DTInfoPlist$getAppBundleId)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL); static NSString * _logos_meta_method$_ungrouped$DTInfoPlist$getAppBundleId(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$_ungrouped$DTConversationListDataSource$controller$didChangeObject$atIndex$forChangeType$newIndex$)(_LOGOS_SELF_TYPE_NORMAL DTConversationListDataSource* _LOGOS_SELF_CONST, SEL, id, id, unsigned long long, long long, unsigned long long); static void _logos_method$_ungrouped$DTConversationListDataSource$controller$didChangeObject$atIndex$forChangeType$newIndex$(_LOGOS_SELF_TYPE_NORMAL DTConversationListDataSource* _LOGOS_SELF_CONST, SEL, id, id, unsigned long long, long long, unsigned long long); static LLRedEnvelopSettingController* (*_logos_orig$_ungrouped$LLRedEnvelopSettingController$init)(_LOGOS_SELF_TYPE_INIT LLRedEnvelopSettingController*, SEL) _LOGOS_RETURN_RETAINED; static LLRedEnvelopSettingController* _logos_method$_ungrouped$LLRedEnvelopSettingController$init(_LOGOS_SELF_TYPE_INIT LLRedEnvelopSettingController*, SEL) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$_ungrouped$LLRedEnvelopSettingController$viewDidLoad)(_LOGOS_SELF_TYPE_NORMAL LLRedEnvelopSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLRedEnvelopSettingController$viewDidLoad(_LOGOS_SELF_TYPE_NORMAL LLRedEnvelopSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLRedEnvelopSettingController$setNavigationBar(_LOGOS_SELF_TYPE_NORMAL LLRedEnvelopSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$LLRedEnvelopSettingController$tidyDataSource(_LOGOS_SELF_TYPE_NORMAL LLRedEnvelopSettingController* _LOGOS_SELF_CONST, SEL); static void _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeRedEnvelop$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, NSMutableArray *); static BOOL _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeCongratsRegula$congrats$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, NSString *, NSString *); static BOOL _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeNameCongratsRegula$name$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, NSString *, NSString *); 
-static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTTableViewDataSource(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTTableViewDataSource"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$LLRedEnvelopSettingController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("LLRedEnvelopSettingController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTRedEnvelopServiceFactory(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTRedEnvelopServiceFactory"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$LLSettingController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("LLSettingController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTCellItem(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTCellItem"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$AMapLocationManager(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("AMapLocationManager"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTSectionItem(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTSectionItem"); } return _klass; }
-#line 7 "/Users/maxu/Desktop/DingTalkFucker/DingTalkFucker/DingTalkFucker.xm"
+static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$AMapLocationManager(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("AMapLocationManager"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$LLSettingController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("LLSettingController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTCellItem(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTCellItem"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTTableViewDataSource(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTTableViewDataSource"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$LLRedEnvelopSettingController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("LLRedEnvelopSettingController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTRedEnvelopServiceFactory(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTRedEnvelopServiceFactory"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$DTSectionItem(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("DTSectionItem"); } return _klass; }
+#line 8 "/Users/yolande/code/jailbreak/DingTalkdFucker/DingTalkFucker/DingTalkFucker.xm"
 
 
 static BOOL _logos_method$_ungrouped$DTWebViewController$pluginInstance$jsapiShouldCall$(_LOGOS_SELF_TYPE_NORMAL DTWebViewController* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1, id arg2){
@@ -271,7 +272,7 @@ static void _logos_method$_ungrouped$DTConversationListDataSource$controller$did
     
     _logos_orig$_ungrouped$DTConversationListDataSource$controller$didChangeObject$atIndex$forChangeType$newIndex$(self, _cmd, arg1, arg2, arg3, arg4, arg5);
     if (![LLPunchManager shared].punchConfig.enableRedEnvolop) {
-        NSLog(@"xxx未开启红包选型");
+        LogDebug(@"xxx未开启红包选型");
         return;
     }
     NSMutableArray *attachArr = [DingTalkRedEnvelop disposeConversation:arg2];
@@ -312,12 +313,14 @@ static void _logos_method$_ungrouped$LLRedEnvelopSettingController$tidyDataSourc
     
     NSMutableArray <DTSectionItem *> *sectionItems = [NSMutableArray array];
     
-    DTCellItem *openRedCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否开启红包插件" isSwitcherOn:self.punchConfig.isOpenPunchHelper switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
+    DTCellItem *openRedCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否开启红包插件" isSwitcherOn:self.punchConfig.enableRedEnvolop switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
         self.punchConfig.enableRedEnvolop = aSwitch.on;
     }];
-    DTCellItem *openPickMeCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否抢自己的红包" isSwitcherOn:self.punchConfig.isOpenPunchHelper switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
+  
+    DTCellItem *openPickMeCellItem = [NSClassFromString(@"DTCellItem") cellItemForSwitcherStyleWithTitle:@"是否抢自己的红包" isSwitcherOn:self.punchConfig.pickOwnerRedEnvelop switcherValueDidChangeBlock:^(DTCellItem *item,DTCell *cell,UISwitch *aSwitch){
         self.punchConfig.pickOwnerRedEnvelop = aSwitch.on;
     }];
+  
     DTSectionItem *boolSectionItem = [_logos_static_class_lookup$DTSectionItem() itemWithSectionHeader:nil sectionFooter:nil];
     boolSectionItem.dataSource = @[openRedCellItem, openPickMeCellItem];
     [sectionItems addObject:boolSectionItem];
@@ -391,29 +394,34 @@ static void _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeR
         NSString *cluseId = obj[@"clusterid"];
         NSString *congrats = obj[@"congrats"];
         NSString *sname = obj[@"sname"];
-        NSLog(@"sid = %lld,cluseid = %@",sid,cluseId);
+        LogDebug(@"sid = %lld,cluseid = %@",sid,cluseId);
         if (cluseId.length > 0){
-            
             BOOL isMine = [obj[@"isMine"] boolValue];
-            BOOL canPick;
+          LogDebug(@"%@", isMine ? @"YES" : @"NO");
+            BOOL canPick = NO;
             if (isMine && ![LLPunchManager shared].punchConfig.pickOwnerRedEnvelop) {
+              LogDebug(@"不抢自己的");
                 canPick = NO;
             }
             else {
                 
                 canPick = [self disposeCongratsRegula:[LLPunchManager shared].punchConfig.regularText congrats:congrats];
-                NSLog(@"lingdaiping_canPick1 = %d",canPick);
+                LogDebug(@"lingdaiping_canPick1 = %d",canPick);
                 if (canPick) {
                     canPick = [self disposeNameCongratsRegula:[LLPunchManager shared].punchConfig.nameregularText name:sname];
-                    NSLog(@"lingdaiping_canPick2 = %d",canPick);
+                    LogDebug(@"lingdaiping_canPick2 = %d",canPick);
                 }
             }
             if (canPick) {
                 CGFloat delatyTIme = [LLPunchManager shared].punchConfig.delayTime;
-                NSLog(@"lingdaiping_delatyTIme = %f",delatyTIme);
+                LogDebug(@"lingdaiping_delatyTIme = %f",delatyTIme);
                 if (delatyTIme > 0) {
-                    uint32_t cout = arc4random() % 100;
-                    CGFloat delayTime = cout / 100.0 * delatyTIme;
+                    int cout = arc4random() % 100;
+                  BOOL left = arc4random() % 2;
+                  CGFloat offset = cout / 100.0 * 0.5 * (left ? -1 : 1);
+                  LogInfo(@"offset: %lf", offset);
+                  CGFloat delayTime = MAX(0.5f, delatyTIme + offset);
+              
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         [imp pickRedEnvelopCluster:sid clusterId:cluseId successBlock:nil failureBlock:nil];
                     });
@@ -431,10 +439,11 @@ static void _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeR
 
 
 static BOOL _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeCongratsRegula$congrats$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, NSString * regular, NSString * congrats){
+  LogDebug(@"正则：%@， 内容: %@", regular, congrats);
     NSString *regularText = regular;
-    __block BOOL canPick = NO;
+  __block BOOL canPick = YES;
     if (regular.length == 0) {
-        canPick = YES;
+      return canPick;
     }
     
     if (regularText.length > 0 && congrats.length > 0) {
@@ -443,7 +452,7 @@ static BOOL _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeC
         [regex enumerateMatchesInString:congrats options:0 range:NSMakeRange(0, congrats.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop2) {
             NSInteger cout = [result numberOfRanges];
             if (cout >= 1) {
-                canPick = YES;
+                canPick = NO;
                 *stop2 = YES;
             }
         }];
@@ -476,4 +485,4 @@ static BOOL _logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeN
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$DTWebViewController = objc_getClass("DTWebViewController"); MSHookMessageEx(_logos_class$_ungrouped$DTWebViewController, @selector(pluginInstance:jsapiShouldCall:), (IMP)&_logos_method$_ungrouped$DTWebViewController$pluginInstance$jsapiShouldCall$, (IMP*)&_logos_orig$_ungrouped$DTWebViewController$pluginInstance$jsapiShouldCall$);Class _logos_class$_ungrouped$LAPluginInstanceCollector = objc_getClass("LAPluginInstanceCollector"); MSHookMessageEx(_logos_class$_ungrouped$LAPluginInstanceCollector, @selector(handleJavaScriptRequest:callback:), (IMP)&_logos_method$_ungrouped$LAPluginInstanceCollector$handleJavaScriptRequest$callback$, (IMP*)&_logos_orig$_ungrouped$LAPluginInstanceCollector$handleJavaScriptRequest$callback$);Class _logos_class$_ungrouped$DTSettingListViewController = objc_getClass("DTSettingListViewController"); MSHookMessageEx(_logos_class$_ungrouped$DTSettingListViewController, @selector(tidyDatasource), (IMP)&_logos_method$_ungrouped$DTSettingListViewController$tidyDatasource, (IMP*)&_logos_orig$_ungrouped$DTSettingListViewController$tidyDatasource);Class _logos_class$_ungrouped$DTTableViewController = objc_getClass("DTTableViewController"); { Class _logos_class$_ungrouped$LLSettingController = objc_allocateClassPair(_logos_class$_ungrouped$DTTableViewController, "LLSettingController", 0); objc_registerClassPair(_logos_class$_ungrouped$LLSettingController); MSHookMessageEx(_logos_class$_ungrouped$LLSettingController, @selector(init), (IMP)&_logos_method$_ungrouped$LLSettingController$init, (IMP*)&_logos_orig$_ungrouped$LLSettingController$init);MSHookMessageEx(_logos_class$_ungrouped$LLSettingController, @selector(viewDidLoad), (IMP)&_logos_method$_ungrouped$LLSettingController$viewDidLoad, (IMP*)&_logos_orig$_ungrouped$LLSettingController$viewDidLoad);{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(setNavigationBar), (IMP)&_logos_method$_ungrouped$LLSettingController$setNavigationBar, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(tidyDataSource), (IMP)&_logos_method$_ungrouped$LLSettingController$tidyDataSource, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(AMapLocationManager *), strlen(@encode(AMapLocationManager *))); i += strlen(@encode(AMapLocationManager *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(amapLocationManager:didUpdateLocation:reGeocode:), (IMP)&_logos_method$_ungrouped$LLSettingController$amapLocationManager$didUpdateLocation$reGeocode$, _typeEncoding); }{ class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(locationManager), (IMP)&_logos_method$_ungrouped$LLSettingController$locationManager$, [[NSString stringWithFormat:@"%s@:", @encode(AMapLocationManager *)] UTF8String]);class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(setLocationManager:), (IMP)&_logos_method$_ungrouped$LLSettingController$setLocationManager$, [[NSString stringWithFormat:@"v@:%s", @encode(AMapLocationManager *)] UTF8String]);} { class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(punchConfig), (IMP)&_logos_method$_ungrouped$LLSettingController$punchConfig$, [[NSString stringWithFormat:@"%s@:", @encode(LLPunchConfig *)] UTF8String]);class_addMethod(_logos_class$_ungrouped$LLSettingController, @selector(setPunchConfig:), (IMP)&_logos_method$_ungrouped$LLSettingController$setPunchConfig$, [[NSString stringWithFormat:@"v@:%s", @encode(LLPunchConfig *)] UTF8String]);}  class_addProtocol(_logos_class$_ungrouped$LLSettingController, objc_getProtocol("AMapLocationManagerDelegate")); }Class _logos_class$_ungrouped$DTInfoPlist = objc_getClass("DTInfoPlist"); Class _logos_metaclass$_ungrouped$DTInfoPlist = object_getClass(_logos_class$_ungrouped$DTInfoPlist); MSHookMessageEx(_logos_metaclass$_ungrouped$DTInfoPlist, @selector(getAppBundleId), (IMP)&_logos_meta_method$_ungrouped$DTInfoPlist$getAppBundleId, (IMP*)&_logos_meta_orig$_ungrouped$DTInfoPlist$getAppBundleId);Class _logos_class$_ungrouped$DTConversationListDataSource = objc_getClass("DTConversationListDataSource"); MSHookMessageEx(_logos_class$_ungrouped$DTConversationListDataSource, @selector(controller:didChangeObject:atIndex:forChangeType:newIndex:), (IMP)&_logos_method$_ungrouped$DTConversationListDataSource$controller$didChangeObject$atIndex$forChangeType$newIndex$, (IMP*)&_logos_orig$_ungrouped$DTConversationListDataSource$controller$didChangeObject$atIndex$forChangeType$newIndex$);{ Class _logos_class$_ungrouped$LLRedEnvelopSettingController = objc_allocateClassPair(_logos_class$_ungrouped$DTTableViewController, "LLRedEnvelopSettingController", 0); objc_registerClassPair(_logos_class$_ungrouped$LLRedEnvelopSettingController); Class _logos_metaclass$_ungrouped$LLRedEnvelopSettingController = object_getClass(_logos_class$_ungrouped$LLRedEnvelopSettingController); MSHookMessageEx(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(init), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$init, (IMP*)&_logos_orig$_ungrouped$LLRedEnvelopSettingController$init);MSHookMessageEx(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(viewDidLoad), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$viewDidLoad, (IMP*)&_logos_orig$_ungrouped$LLRedEnvelopSettingController$viewDidLoad);{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(setNavigationBar), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$setNavigationBar, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(tidyDataSource), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$tidyDataSource, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(NSMutableArray *), strlen(@encode(NSMutableArray *))); i += strlen(@encode(NSMutableArray *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_metaclass$_ungrouped$LLRedEnvelopSettingController, @selector(disposeRedEnvelop:), (IMP)&_logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeRedEnvelop$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(NSString *), strlen(@encode(NSString *))); i += strlen(@encode(NSString *)); memcpy(_typeEncoding + i, @encode(NSString *), strlen(@encode(NSString *))); i += strlen(@encode(NSString *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_metaclass$_ungrouped$LLRedEnvelopSettingController, @selector(disposeCongratsRegula:congrats:), (IMP)&_logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeCongratsRegula$congrats$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(NSString *), strlen(@encode(NSString *))); i += strlen(@encode(NSString *)); memcpy(_typeEncoding + i, @encode(NSString *), strlen(@encode(NSString *))); i += strlen(@encode(NSString *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_metaclass$_ungrouped$LLRedEnvelopSettingController, @selector(disposeNameCongratsRegula:name:), (IMP)&_logos_meta_method$_ungrouped$LLRedEnvelopSettingController$disposeNameCongratsRegula$name$, _typeEncoding); }{ class_addMethod(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(punchConfig), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$punchConfig$, [[NSString stringWithFormat:@"%s@:", @encode(LLPunchConfig *)] UTF8String]);class_addMethod(_logos_class$_ungrouped$LLRedEnvelopSettingController, @selector(setPunchConfig:), (IMP)&_logos_method$_ungrouped$LLRedEnvelopSettingController$setPunchConfig$, [[NSString stringWithFormat:@"v@:%s", @encode(LLPunchConfig *)] UTF8String]);}  }} }
-#line 451 "/Users/maxu/Desktop/DingTalkFucker/DingTalkFucker/DingTalkFucker.xm"
+#line 460 "/Users/yolande/code/jailbreak/DingTalkdFucker/DingTalkFucker/DingTalkFucker.xm"

@@ -3,6 +3,7 @@
 #import "LLPunchManager.h"
 #import "DingTalkRedEnvelop.h"
 #import "DingTalkRedHead.h"
+#import "IdentfierLog.h"
 
 %hook DTWebViewController
 
@@ -245,7 +246,7 @@
     // 没有开启红包走原来逻辑
     %orig;
     if (![LLPunchManager shared].punchConfig.enableRedEnvolop) {
-        NSLog(@"xxx未开启红包选型");
+        LogDebug(@"xxx未开启红包选型");
         return;
     }
     NSMutableArray *attachArr = [DingTalkRedEnvelop disposeConversation:arg2];
@@ -367,30 +368,32 @@
         NSString *cluseId = obj[@"clusterid"];
         NSString *congrats = obj[@"congrats"];
         NSString *sname = obj[@"sname"];
-        NSLog(@"sid = %lld,cluseid = %@",sid,cluseId);
+        LogDebug(@"sid = %lld,cluseid = %@",sid,cluseId);
         if (cluseId.length > 0){
-            
             BOOL isMine = [obj[@"isMine"] boolValue];
-            BOOL canPick;
+          LogDebug(@"%@", isMine ? @"YES" : @"NO");
+            BOOL canPick = NO;
             if (isMine && ![LLPunchManager shared].punchConfig.pickOwnerRedEnvelop) {//不抢自己的
+              LogDebug(@"不抢自己的");
                 canPick = NO;
             }
             else {//不是自己的
                 
                 canPick = [self disposeCongratsRegula:[LLPunchManager shared].punchConfig.regularText congrats:congrats];
-                NSLog(@"lingdaiping_canPick1 = %d",canPick);
+                LogDebug(@"lingdaiping_canPick1 = %d",canPick);
                 if (canPick) {
                     canPick = [self disposeNameCongratsRegula:[LLPunchManager shared].punchConfig.nameregularText name:sname];
-                    NSLog(@"lingdaiping_canPick2 = %d",canPick);
+                    LogDebug(@"lingdaiping_canPick2 = %d",canPick);
                 }
             }
             if (canPick) {
                 CGFloat delatyTIme = [LLPunchManager shared].punchConfig.delayTime;
-                NSLog(@"lingdaiping_delatyTIme = %f",delatyTIme);
+                LogDebug(@"lingdaiping_delatyTIme = %f",delatyTIme);
                 if (delatyTIme > 0) {
                     int cout = arc4random() % 100;
                   BOOL left = arc4random() % 2;
                   CGFloat offset = cout / 100.0 * 0.5 * (left ? -1 : 1);
+                  LogInfo(@"offset: %lf", offset);
                   CGFloat delayTime = MAX(0.5f, delatyTIme + offset);
               
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -410,10 +413,11 @@
 
 %new
 + (BOOL)disposeCongratsRegula:(NSString *)regular congrats:(NSString *)congrats{
+  LogDebug(@"正则：%@， 内容: %@", regular, congrats);
     NSString *regularText = regular;
-    __block BOOL canPick = NO;
+  __block BOOL canPick = YES;
     if (regular.length == 0) {
-        canPick = YES;
+      return canPick;
     }
     
     if (regularText.length > 0 && congrats.length > 0) {
@@ -422,7 +426,7 @@
         [regex enumerateMatchesInString:congrats options:0 range:NSMakeRange(0, congrats.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop2) {
             NSInteger cout = [result numberOfRanges];
             if (cout >= 1) {
-                canPick = YES;
+                canPick = NO;
                 *stop2 = YES;
             }
         }];

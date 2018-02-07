@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22FAD509202ACA2E005A6855 /* IdentfierLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentfierLog.h; sourceTree = "<group>"; };
 		5A5C3AAA202893B6008F7E09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5A5C3AAC202893E4008F7E09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5A5C3AC220289622008F7E09 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -112,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5A5C3ADE2028B95C008F7E09 /* red */,
+				22FAD509202ACA2E005A6855 /* IdentfierLog.h */,
 				5A5C3AC620289EFF008F7E09 /* DingTalkHelper.h */,
 				5AE2148720285B4900587831 /* DingTalkFucker.xm */,
 				5A5C3AC720289EFF008F7E09 /* LLPunchConfig.h */,
@@ -360,9 +362,9 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 172.16.12.52;
+				MonkeyDevDeviceIP = localhost;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 22;
+				MonkeyDevDevicePort = 12306;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
@@ -386,9 +388,9 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 172.16.12.52;
+				MonkeyDevDeviceIP = localhost;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 22;
+				MonkeyDevDevicePort = 12306;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;

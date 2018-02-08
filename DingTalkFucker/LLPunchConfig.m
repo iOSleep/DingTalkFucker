@@ -35,6 +35,7 @@ static NSString * const kLLLongitudeKey = @"LLLongitude";
     self.regularText = [coder decodeObjectForKey:@"regularText"];
     self.nameregularText = [coder decodeObjectForKey:@"nameregularText"];
     self.redenvelopTypeText = [coder decodeObjectForKey:@"redenvelopTypeText"];
+    self.minimumAcceptAmount = [coder decodeObjectForKey:@"minimumAcceptAmount"]?:@"0.01";
   }
   return self;
 }
@@ -55,6 +56,7 @@ static NSString * const kLLLongitudeKey = @"LLLongitude";
   [coder encodeObject:self.regularText forKey:@"regularText"];
   [coder encodeObject:self.nameregularText forKey:@"nameregularText"];
   [coder encodeObject:self.redenvelopTypeText forKey:@"redenvelopTypeText"];
+  [coder encodeObject:self.minimumAcceptAmount forKey:@"minimumAcceptAmount"];
 }
 
 - (id)copyWithZone:(nullable NSZone *)zone{
@@ -72,6 +74,7 @@ static NSString * const kLLLongitudeKey = @"LLLongitude";
   config.regularText = self.regularText;
   config.nameregularText = self.nameregularText;
   config.redenvelopTypeText = self.redenvelopTypeText;
+  config.minimumAcceptAmount = self.minimumAcceptAmount?:@"0.01";
   return config;
 }
 

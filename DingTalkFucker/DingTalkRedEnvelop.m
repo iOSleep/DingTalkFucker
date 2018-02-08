@@ -105,7 +105,8 @@
           retDict[@"isMine"] = @([converdation.latestMessage isMine]);
           retDict[@"congrats"] = extension[@"congrats"];
           retDict[@"sname"] = extension[@"sname"];
-          
+          // 原始值传递，没有解析
+          retDict[@"amount"] = extension[@"amount"];
           NSLog(@"disposeConversation_retDict = %@", retDict);
           [retArr addObject:retDict];
         }];

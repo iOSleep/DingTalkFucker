@@ -9,6 +9,7 @@
 #import "DingTalkRedEnvelop.h"
 #import "LLPunchManager.h"
 #import "DingTalkRedHead.h"
+#import "IdentfierLog.h"
 /*
  {
  "contentType" : 901,
@@ -79,27 +80,27 @@
 }
 + (NSMutableArray *)disposeConversation:(WKBizConversation *)converdation {
     
-  NSLog(@"disposeConversation_sation = %@", converdation);
+  LogInfo(@"disposeConversation_sation = %@", converdation);
     //WKBizConversation *converdation = sation;
   NSMutableArray *retArr = [NSMutableArray new];
-  NSLog(@"disposeConversation_converdation.latestMessage = %@", converdation.latestMessage);
+  LogInfo(@"disposeConversation_converdation.latestMessage = %@", converdation.latestMessage);
   NSString *attachmentsJson = converdation.latestMessage.attachmentsJson;
-  NSLog(@"disposeConversation_attachmentsJson = %@", attachmentsJson);
+  LogInfo(@"disposeConversation_attachmentsJson = %@", attachmentsJson);
   if (attachmentsJson.length > 0) {
     NSData* jsonData = [attachmentsJson dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
-    NSLog(@"disposeConversation_dict = %@", dict);
+    LogInfo(@"disposeConversation_dict = %@", dict);
     NSNumber *contentType = dict[@"contentType"];
-    NSLog(@"disposeConversation_contentType = %@", contentType);
+    LogInfo(@"disposeConversation_contentType = %@", contentType);
     if ([self canDisposeRedenvelopType:contentType.integerValue] ) {//红包
       NSMutableDictionary *retDict = [NSMutableDictionary new];
       retDict[@"contentType"] = contentType;
       NSArray *arr = dict[@"attachments"];
-      NSLog(@"disposeConversation_arr = %@", arr);
+      LogInfo(@"disposeConversation_arr = %@", arr);
       if (arr.count > 0) {
         [arr enumerateObjectsUsingBlock:^(NSDictionary *attachmentDict, NSUInteger idx, BOOL * _Nonnull stop) {
           NSDictionary *extension = attachmentDict[@"extension"];
-          NSLog(@"disposeConversation_extension = %@", extension);
+          LogInfo(@"disposeConversation_extension = %@", extension);
           retDict[@"clusterid"] = extension[@"clusterid"];
           retDict[@"sid"] = extension[@"sid"];
           retDict[@"isMine"] = @([converdation.latestMessage isMine]);
@@ -107,7 +108,7 @@
           retDict[@"sname"] = extension[@"sname"];
           // 原始值传递，没有解析
           retDict[@"amount"] = extension[@"amount"];
-          NSLog(@"disposeConversation_retDict = %@", retDict);
+          LogInfo(@"disposeConversation_retDict = %@", retDict);
           [retArr addObject:retDict];
         }];
       }

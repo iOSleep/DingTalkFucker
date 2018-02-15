@@ -374,7 +374,7 @@
     LogDebug(@"sid = %lld,cluseid = %@",sid,cluseId);
     if (cluseId.length > 0){
       BOOL isMine = [obj[@"isMine"] boolValue];
-      LogDebug(@"%@", isMine ? @"YES" : @"NO");
+      LogDebug(@"%@", isMine ? @"我的" : @"别人的");
       BOOL canPick = NO;
       if (isMine && ![LLPunchManager shared].punchConfig.pickOwnerRedEnvelop) {//不抢自己的
         LogDebug(@"不抢自己的");
@@ -382,28 +382,30 @@
       }
       else {//不是自己的
         float limitAmount = [[LLPunchManager shared].punchConfig.minimumAcceptAmount floatValue];
-        if (limitAmount >= 0.01 && [obj[@"amount"] floatValue] >= limitAmount) {
+        LogInfo(@"%f, 记录数据", [obj[@"amount"] floatValue]);
+          LogInfo(@"%f, 记录数据", limitAmount);
+        if (limitAmount >= 0.009 && [obj[@"amount"] floatValue] >= limitAmount) {
+            LogInfo(@"数额可以抢");
           canPick = YES;
         }
         if (canPick) {
           canPick = [self disposeCongratsRegula:[LLPunchManager shared].punchConfig.regularText congrats:congrats];
-          LogDebug(@"lingdaiping_canPick1 = %d",canPick);
+          LogDebug(@"内容可以抢 = %d",canPick);
           if (canPick) {
             canPick = [self disposeNameCongratsRegula:[LLPunchManager shared].punchConfig.nameregularText name:sname];
-            LogDebug(@"lingdaiping_canPick2 = %d",canPick);
+            LogDebug(@"人物可以抢 = %d",canPick);
           }
         }
       }
       if (canPick) {
         CGFloat delatyTIme = [LLPunchManager shared].punchConfig.delayTime;
-        LogDebug(@"lingdaiping_delatyTIme = %f",delatyTIme);
+        LogDebug(@"设置延时 = %f",delatyTIme);
         if (delatyTIme > 0) {
-          int cout = arc4random() % 100;
           BOOL left = arc4random() % 2;
-          CGFloat offset = cout / 100.0 * 0.5 * (left ? -1 : 1);
+          CGFloat offset = 0.1 * (left ? -1 : 1);
           LogInfo(@"offset: %lf", offset);
           CGFloat delayTime = MAX(0.5f, delatyTIme + offset);
-          
+            LogDebug(@"实际延时 = %f",delayTime);
           dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [imp pickRedEnvelopCluster:sid clusterId:cluseId successBlock:nil failureBlock:nil];
           });

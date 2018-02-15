@@ -32,15 +32,14 @@
 //        [self showMessage:[NSString stringWithFormat:@"%@",data] completion:nil];
 //        return self;
         self.redEnvelopTypeArr = @[@901, @902, @905].mutableCopy;
+        NSLog(@"开始初始化");
         @try{
         if(!(self.punchConfig = [NSKeyedUnarchiver unarchiveObjectWithData:data])){
             self.punchConfig = [[LLPunchConfig alloc] init];
-            NSLog(@"xxx完成manager初始化");
+            NSLog(@"异常初始化");
         }
         }  @catch (NSException *exception) {
-            
             return self;
-            
         }
     }
     return self;

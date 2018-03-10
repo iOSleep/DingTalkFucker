@@ -118,16 +118,4 @@
   return retArr;  
 }
 
-//+ (void)controller:(id)arg1 didChangeObject:(id)arg2 atIndex:(unsigned long long)arg3 forChangeType:(long long)arg4 newIndex:(unsigned long long)arg5
-//{ 
-//    //%log; %orig; 
-//    //在这里处理
-//  NSMutableArray *attachArr = [self disposeConversation:arg2];
-//  [attachArr enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//    DTRedEnvelopServiceIMP *imp = [DTRedEnvelopServiceFactory defaultServiceIMP];
-//    long long sid = [obj[@"sid"] longLongValue];
-//    NSString *cluseId = obj[@"clusterid"];
-//    [imp pickRedEnvelopCluster:sid clusterId:cluseId successBlock:nil failureBlock:nil];
-//  }];
-//}
 @end

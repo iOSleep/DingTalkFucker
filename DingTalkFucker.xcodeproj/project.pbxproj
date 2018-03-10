@@ -362,7 +362,7 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 192.168.1.104;
+				MonkeyDevDeviceIP = 192.168.0.3;
 				MonkeyDevDevicePassword = "";
 				MonkeyDevDevicePort = 2222;
 				MonkeyDevInstallOnAnyBuild = YES;
@@ -388,7 +388,7 @@
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 192.168.1.104;
+				MonkeyDevDeviceIP = 192.168.0.3;
 				MonkeyDevDevicePassword = "";
 				MonkeyDevDevicePort = 2222;
 				MonkeyDevInstallOnAnyBuild = YES;
